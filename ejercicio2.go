@@ -29,6 +29,8 @@ func mostarArchivo(cad string) {
 	for _, c := range cadena {
 		fmt.Printf("%s\t", c)
 	}
+
+	fmt.Printf("\n")
 }
 
 func main() {

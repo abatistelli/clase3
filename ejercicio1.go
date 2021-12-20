@@ -23,11 +23,13 @@ type producto struct {
 
 func encadenarString(values []producto) string {
 	cadena := "Id;Precio;Cantidad\n"
+	var total float64
 
 	for _, value := range values {
+		total += value.Precio
 		cadena += fmt.Sprintf("%s;%.2f;%d\n", value.Id, value.Precio, value.Cantidad)
 	}
-
+	cadena += fmt.Sprintf(";%.2f;", total)
 	return cadena
 }
 
